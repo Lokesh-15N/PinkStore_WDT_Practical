@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Pinkstore | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"><a href="index.html"><img src="images/logo.png" width="125px"></a></div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li class="active"><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+            <div class="testimonial">
+                <div class="small-container">
+                    <div class="row">
+                        <div class="col-3">
+                            <i class="fa fa-quote-left"></i>
+                            <p>The website for Red Store is sleek, easy to navigate, and well-designed. It has a modern layout with clear categories like "Men’s Sportswear,"
+                                 "Women’s Activewear," and "Accessories." The search function is highly effective, allowing me to quickly find exactly what I was looking for. 
+                                 Filters for size, color, and price are helpful, but I would have appreciated more advanced filters like fabric type or specific activities.</p>
+                            <img src="images/user-1.png">
+                            <h3>Sean Parker</h3>
+                        </div>
+                        <div class="col-3">
+                            <i class="fa fa-quote-left"></i>
+                            <p>Red Store offers an extensive range of products, including activewear, fitness gear, running shoes, and accessories. The variety is impressive, with 
+                                a wide range of brands and styles to choose from. Whether you’re looking for high-performance gear or stylish casual wear, they have something for
+                                 everyone. The product pages are well-detailed, with clear images, sizing guides, and customer reviews, which made me feel confident.</p>
+                            <img src="images/user-2.png">
+                            <h3>Mike Smith</h3>
+                        </div>
+                        <div class="col-3">
+                            <i class="fa fa-quote-left"></i>
+                            <p>Shipping was fast and efficient. My order arrived within the expected timeframe, and the packaging was secure, ensuring everything was in perfect
+                                 condition. The site also offers a hassle-free return policy, which made me feel confident about shopping without worrying about potential sizing 
+                                 issues. Returns were simple, and I received my refund promptly.</p>
+                            <img src="images/user-3.png">
+                            <h3>Mabel Joe</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo.png">
+                    <p>Our Purpose is to Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">Copyright 2020 - Easy Tutorial</p>
+        </div>
+    </div>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            MenuItems.style.maxHeight = (MenuItems.style.maxHeight == "0px") ? "200px" : "0px";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Pinkstore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" width="125px" alt="Redstore Logo"></a></div>
+            <nav><ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li></ul></nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" alt="Cart"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+    <div class="small-container cart-page">
+        <table>
+            <tr><th>Product</th><th>Quantity</th><th>Subtotal</th></tr>
+            <tr>
+                <td><div class="cart-info"><img src="images/buy-1.jpg" alt="Printed T-Shirt"><div>
+                    <p>Printed T-Shirt</p><small>Price: $50.00</small><br><a href="product.html">Remove</a></div></div></td>
+                <td><input type="number" value="1" min="1" max="10" onchange="updateTotal()"></td>
+                <td>$50.00</td>
+            </tr>
+        </table>
+        <div class="total-price">
+            <table>
+                <tr><td>Subtotal</td><td id="subtotal">$50.00</td></tr>
+                <tr><td>Tax</td><td id="tax">$15.00</td></tr>
+                <tr><td>Total</td><td id="total">$65.00</td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="buy-btn-div"><a href="payment.html" class="buy-btn">Buy Now &#8594;</a></div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and iOS mobile phone.</p>
+                    <div class="app-logo"><img src="images/play-store.png" alt="Play Store"><img src="images/app-store.png" alt="App Store"></div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo.png" alt="Redstore Logo">
+                    <p>Our Purpose is to Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul><li>Coupons</li><li>Blog Post</li><li>Return Policy</li><li>Join Affiliate</li></ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul><li>Facebook</li><li>Twitter</li><li>Instagram</li><li>Youtube</li></ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">Copyright 2020 - Easy Tutorial</p>
+        </div>
+    </div>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            MenuItems.style.maxHeight = (MenuItems.style.maxHeight == "0px") ? "200px" : "0px";
+        }
+        function updateTotal() {
+            var quantity = document.querySelector('input[type="number"]').value;
+            var price = 50;
+            var subtotal = price * quantity;
+            var tax = subtotal * 0.3;
+            var total = subtotal + tax;
+            document.getElementById("subtotal").textContent = "$" + subtotal.toFixed(2);
+            document.getElementById("tax").textContent = "$" + tax.toFixed(2);
+            document.getElementById("total").textContent = "$" + total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
